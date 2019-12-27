@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,9 +14,11 @@
 		9D95E5FA23B610C4002472C0 /* Rat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9D95E5F823B610C4002472C0 /* Rat.xcdatamodeld */; };
 		9D95E5FC23B610C6002472C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D95E5FB23B610C6002472C0 /* Assets.xcassets */; };
 		9D95E5FF23B610C6002472C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D95E5FD23B610C6002472C0 /* LaunchScreen.storyboard */; };
+		B54E40AE39371536BFADC92B /* Pods_Rat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96D07C79B2E26F73AABDC7D3 /* Pods_Rat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		96D07C79B2E26F73AABDC7D3 /* Pods_Rat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D95E5EC23B610C4002472C0 /* Rat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D95E5EF23B610C4002472C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D95E5F123B610C4002472C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		9D95E5FB23B610C6002472C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9D95E5FE23B610C6002472C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9D95E60023B610C6002472C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9AFAE1FBCC58185DBB623FB /* Pods-Rat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rat.release.xcconfig"; path = "Target Support Files/Pods-Rat/Pods-Rat.release.xcconfig"; sourceTree = "<group>"; };
+		CE0590CE89242ECE8E09A559 /* Pods-Rat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rat.debug.xcconfig"; path = "Target Support Files/Pods-Rat/Pods-Rat.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54E40AE39371536BFADC92B /* Pods_Rat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		961FD33DA1B04D65424C1902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96D07C79B2E26F73AABDC7D3 /* Pods_Rat.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D95E5E323B610C4002472C0 = {
 			isa = PBXGroup;
 			children = (
 				9D95E5EE23B610C4002472C0 /* Rat */,
 				9D95E5ED23B610C4002472C0 /* Products */,
+				E2C74911D5F207A0FC459690 /* Pods */,
+				961FD33DA1B04D65424C1902 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +85,15 @@
 			path = Rat;
 			sourceTree = "<group>";
 		};
+		E2C74911D5F207A0FC459690 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE0590CE89242ECE8E09A559 /* Pods-Rat.debug.xcconfig */,
+				A9AFAE1FBCC58185DBB623FB /* Pods-Rat.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9D95E60323B610C6002472C0 /* Build configuration list for PBXNativeTarget "Rat" */;
 			buildPhases = (
+				E9376CC6D64D02C8B491A043 /* [CP] Check Pods Manifest.lock */,
 				9D95E5E823B610C4002472C0 /* Sources */,
 				9D95E5E923B610C4002472C0 /* Frameworks */,
 				9D95E5EA23B610C4002472C0 /* Resources */,
+				0F7C252ABE41616214650707 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F7C252ABE41616214650707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rat/Pods-Rat-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Rat/Pods-Rat-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Rat/Pods-Rat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9376CC6D64D02C8B491A043 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Rat-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9D95E5E823B610C4002472C0 /* Sources */ = {
@@ -286,6 +354,7 @@
 		};
 		9D95E60423B610C6002472C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE0590CE89242ECE8E09A559 /* Pods-Rat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +373,7 @@
 		};
 		9D95E60523B610C6002472C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9AFAE1FBCC58185DBB623FB /* Pods-Rat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
